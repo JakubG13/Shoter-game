@@ -1,6 +1,9 @@
 const spaceship = document.querySelector(".spaceship");
 let keys = [];
-let moveNumber = 10;
+let moveNumber = 30;
+// let Y = spaceship.getBoundingClientRect().y;
+// console.log(Y);
+
 const move = (e) => {
   console.log(keys);
 
@@ -8,75 +11,111 @@ const move = (e) => {
     keys.push(e.key);
   }
 
-  if (keys.includes("w") && keys.length === 1) {
+  if (
+    keys.includes("w") &&
+    keys.length === 1 &&
+    spaceship.getBoundingClientRect().y >= 0
+  ) {
     shipY = spaceship.getBoundingClientRect().y;
-    newPose = shipY - moveNumber;
-    spaceship.style.top = newPose + "px";
-  } else if (keys.includes("s") && keys.length === 1) {
+    newPos = shipY - moveNumber;
+    spaceship.style.top = newPos + "px";
+  } else if (
+    keys.includes("s") &&
+    keys.length === 1 &&
+    spaceship.getBoundingClientRect().y <= window.innerHeight - 60
+  ) {
     shipY = spaceship.getBoundingClientRect().y;
-    newPose = shipY + moveNumber;
-    spaceship.style.top = newPose + "px";
-  } else if (keys.includes("a") && keys.length === 1) {
+    newPos = shipY + moveNumber;
+    spaceship.style.top = newPos + "px";
+  } else if (
+    keys.includes("a") &&
+    keys.length === 1 &&
+    spaceship.getBoundingClientRect().x >= 10
+  ) {
     shipX = spaceship.getBoundingClientRect().x;
-    newPose = shipX - moveNumber;
-    spaceship.style.left = newPose + "px";
-  } else if (keys.includes("d") && keys.length === 1) {
+    newPos = shipX - moveNumber;
+    spaceship.style.left = newPos + "px";
+  } else if (
+    keys.includes("d") &&
+    keys.length === 1 &&
+    spaceship.getBoundingClientRect().x <= window.innerWidth - 80
+  ) {
     shipX = spaceship.getBoundingClientRect().x;
-    newPose = shipX + moveNumber;
-    spaceship.style.left = newPose + "px";
+    newPos = shipX + moveNumber;
+    spaceship.style.left = newPos + "px";
   }
-  if (keys.includes("w") && keys.includes("a")) {
+  if (
+    keys.includes("w") &&
+    keys.includes("a") &&
+    spaceship.getBoundingClientRect().y >= 0 &&
+    spaceship.getBoundingClientRect().x >= 10
+  ) {
     shipY = spaceship.getBoundingClientRect().y;
-    newPoseY = shipY - moveNumber;
-    spaceship.style.top = newPoseY + "px";
+    newPosY = shipY - moveNumber;
+    spaceship.style.top = newPosY + "px";
     shipX = spaceship.getBoundingClientRect().x;
-    newPoseX = shipX - moveNumber;
-    spaceship.style.left = newPoseX + "px";
-  } else if (keys.includes("w") && keys.includes("d")) {
+    newPosX = shipX - moveNumber;
+    spaceship.style.left = newPosX + "px";
+  } else if (
+    keys.includes("w") &&
+    keys.includes("d") &&
+    spaceship.getBoundingClientRect().y >= 0 &&
+    spaceship.getBoundingClientRect().x <= window.innerWidth - 80
+  ) {
     shipY = spaceship.getBoundingClientRect().y;
-    newPoseY = shipY - moveNumber;
-    spaceship.style.top = newPoseY + "px";
+    newPosY = shipY - moveNumber;
+    spaceship.style.top = newPosY + "px";
     shipX = spaceship.getBoundingClientRect().x;
-    newPoseX = shipX + moveNumber;
-    spaceship.style.left = newPoseX + "px";
-  } else if (keys.includes("s") && keys.includes("d")) {
+    newPosX = shipX + moveNumber;
+    spaceship.style.left = newPosX + "px";
+  } else if (
+    keys.includes("s") &&
+    keys.includes("d") &&
+    spaceship.getBoundingClientRect().y <= window.innerHeight - 60 &&
+    spaceship.getBoundingClientRect().x <= window.innerWidth - 80
+  ) {
     shipY = spaceship.getBoundingClientRect().y;
-    newPoseY = shipY + moveNumber;
-    spaceship.style.top = newPoseY + "px";
+    newPosY = shipY + moveNumber;
+    spaceship.style.top = newPosY + "px";
     shipX = spaceship.getBoundingClientRect().x;
-    newPoseX = shipX + moveNumber;
-    spaceship.style.left = newPoseX + "px";
-  } else if (keys.includes("s") && keys.includes("a")) {
+    newPosX = shipX + moveNumber;
+    spaceship.style.left = newPosX + "px";
+  } else if (
+    keys.includes("s") &&
+    keys.includes("a") &&
+    spaceship.getBoundingClientRect().y <= window.innerHeight - 60 &&
+    spaceship.getBoundingClientRect().x >= 10
+  ) {
     shipY = spaceship.getBoundingClientRect().y;
-    newPoseY = shipY + moveNumber;
-    spaceship.style.top = newPoseY + "px";
+    newPosY = shipY + moveNumber;
+    spaceship.style.top = newPosY + "px";
     shipX = spaceship.getBoundingClientRect().x;
-    newPoseX = shipX - moveNumber;
-    spaceship.style.left = newPoseX + "px";
+    newPosX = shipX - moveNumber;
+    spaceship.style.left = newPosX + "px";
   }
 
   //   switch (e.keyCode) {
   //     case 87:
   //       shipY = spaceship.getBoundingClientRect().y;
-  //       newPose = shipY - moveNumber;
-  //       spaceship.style.top = newPose + "px";
+  //       newPos = shipY - moveNumber;
+  //       spaceship.style.top = newPos + "px";
   //       return;
   //     case 83:
   //       shipY = spaceship.getBoundingClientRect().y;
-  //       newPose = shipY + moveNumber;
-  //       spaceship.style.top = newPose + "px";
+  //       newPos = shipY + moveNumber;
+  //       spaceship.style.top = newPos + "px";
   //       return;
 
   //     case 65:
   //       shipX = spaceship.getBoundingClientRect().x;
-  //       newPose = shipX - moveNumber;
-  //       spaceship.style.left = newPose + "px";
+  //       newPos = shipX - moveNumber;
+  //       spaceship.style.left = newPos + "px";
   //       return;
 
   //     case 68:
   //       shipX = spaceship.getBoundingClientRect().x;
-  //       newPose = shipX + moveNumber;
-  //       spaceship.style.left = newPose + "px";
+  //       newPos = shipX + moveNumber;
+  //       spaceship.style.left = newPos + "px";
   //       return;
   //     default:
   //   }
