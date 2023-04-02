@@ -1,8 +1,8 @@
 .spaceship {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: calc(50% - 50px / 2);
+  left: calc(50% - 75px / 2);
+  //   transform: translate(-50%, -50%);
   //   background-color: yellow;
   width: 75px;
   height: 50px;
