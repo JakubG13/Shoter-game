@@ -15,4 +15,4 @@ const randomColor = () => {
   spaceshipY.style.border = `3px solid ${color}`;
 };
 
-// setInterval(randomColor, 2000);
+setInterval(randomColor, 2000);
