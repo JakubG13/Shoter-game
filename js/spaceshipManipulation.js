@@ -1,8 +1,5 @@
-const spaceship = document.querySelector(".spaceship");
 let keys = [];
-let moveNumber = 30;
-// let Y = spaceship.getBoundingClientRect().y;
-// console.log(Y);
+let moveNumber = 1;
 
 const move = (e) => {
   console.log(keys);
@@ -23,9 +20,14 @@ const move = (e) => {
     newPos = shipX + moveNumber;
     spaceship.style.left = newPos + "px";
   }
+  if (keys.includes("w")) {
+    let bullet = new Bullet(bulletX, bulletY);
+    bullet.createBullet();
+  }
 };
 
 document.addEventListener("keydown", move);
-document.addEventListener("keyup", () => {
-  keys = [];
+document.addEventListener("keyup", (e) => {
+  let index = keys.indexOf(e.key);
+  keys.splice(index, 1);
 });

@@ -1,0 +1,14 @@
+.bullet {
+  width: 10px;
+  height: 30px;
+  background-color: yellow;
+  border-radius: 20px;
+  position: absolute;
+  animation: shot 1s linear 1 both;
+}
+
+@keyframes shot {
+  100% {
+    top: -5%;
+  }
+}
