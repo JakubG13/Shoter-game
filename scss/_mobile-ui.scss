@@ -1,0 +1,60 @@
+@media (max-width: 1200px) and (orientation: portrait) {
+  .mobile-ui {
+    opacity: 0.1;
+    width: 160px;
+    height: 140px;
+    position: fixed;
+    top: calc(70% - 140px / 2);
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+  }
+  .mobile-ui__left,
+  .mobile-ui__right,
+  .mobile-ui__shot {
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+  .mobile-ui {
+    opacity: 0.1;
+    width: 160px;
+    height: 140px;
+    position: fixed;
+    top: calc(70% - 140px / 2);
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+  }
+  .mobile-ui__left,
+  .mobile-ui__right,
+  .mobile-ui__shot {
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+  .mobile-ui__shot {
+    position: fixed;
+    top: calc(70% - 70px / 2);
+    left: 2%;
+  }
+}

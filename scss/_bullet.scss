@@ -22,6 +22,9 @@
   bottom: 7%;
   right: 2%;
   opacity: 1;
+  @media (max-width: 1200px) {
+    bottom: 80%;
+  }
 }
 
 .bullet-ui__bg {
@@ -33,6 +36,9 @@
   bottom: 7%;
   right: 2%;
   opacity: 0.2;
+  @media (max-width: 1200px) {
+    bottom: 80%;
+  }
 }
 .bullet-ui-animation {
   animation: bulletLoad 1s both linear;

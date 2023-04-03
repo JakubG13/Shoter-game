@@ -1,11 +1,14 @@
 .spaceship {
   position: fixed;
-  top: 92%;
+  top: 89%;
   left: calc(50% - 75px / 2);
   //   transform: translate(-50%, -50%);
   //   background-color: yellow;
   width: 75px;
   height: 50px;
+  @media (orientation: landscape) and (max-width: 1200px) {
+    top: 80%;
+  }
 }
 .spaceship__y {
   background-color: rgb(0, 183, 255);
