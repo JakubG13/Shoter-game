@@ -13,8 +13,7 @@
     font-size: 2rem;
   }
   .mobile-ui__left,
-  .mobile-ui__right,
-  .mobile-ui__shot {
+  .mobile-ui__right {
     background-color: white;
     border-radius: 50%;
     width: 70px;
@@ -29,20 +28,11 @@
 @media (max-width: 1200px) and (orientation: landscape) {
   .mobile-ui {
     opacity: 0.1;
-    width: 160px;
-    height: 140px;
-    position: fixed;
-    top: calc(70% - 140px / 2);
-    right: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
     font-size: 2rem;
   }
-  .mobile-ui__left,
+
   .mobile-ui__right,
-  .mobile-ui__shot {
+  .mobile-ui__left {
     background-color: white;
     border-radius: 50%;
     width: 70px;
@@ -51,8 +41,11 @@
     align-items: center;
     justify-content: center;
     color: black;
+    position: fixed;
+    top: calc(70% - 70px / 2);
+    right: 2%;
   }
-  .mobile-ui__shot {
+  .mobile-ui__left {
     position: fixed;
     top: calc(70% - 70px / 2);
     left: 2%;

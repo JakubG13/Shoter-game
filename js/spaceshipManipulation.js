@@ -37,12 +37,27 @@ const shot = () => {
   }
 };
 
-document.addEventListener("click", shot);
+document.querySelector(".shotHere").addEventListener("click", shot);
 document.addEventListener("keydown", move);
 document.addEventListener("keyup", (e) => {
   let index = moveKeys.indexOf(e.key);
   moveKeys.splice(index, 1);
 });
 
-// let bullet = new Bullet(bulletX, bulletY);
-//       bullet.createBullet();
+// mobile
+const leftArrow = document.querySelector(".mobile-ui__left");
+const rightArrow = document.querySelector(".mobile-ui__right");
+leftArrow.addEventListener("touchstart", () => {
+  if (spaceship.getBoundingClientRect().x >= 30) {
+    shipX = spaceship.getBoundingClientRect().x;
+    newPos = shipX - moveNumber;
+    spaceship.style.left = newPos + "px";
+  }
+});
+rightArrow.addEventListener("touchstart", () => {
+  if (spaceship.getBoundingClientRect().x <= window.innerWidth - 100) {
+    shipX = spaceship.getBoundingClientRect().x;
+    newPos = shipX + moveNumber;
+    spaceship.style.left = newPos + "px";
+  }
+});

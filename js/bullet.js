@@ -9,7 +9,7 @@ class Bullet {
     this.bulletX = bulletX + 33;
     this.bulletY = bulletY - 25;
   }
-  // metody
+
   createBullet() {
     const bullet = document.createElement("div");
     bullet.classList.add("bullet");
