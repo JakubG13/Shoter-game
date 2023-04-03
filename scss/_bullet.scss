@@ -12,3 +12,36 @@
     top: -5%;
   }
 }
+
+.bullet-ui {
+  width: 20px;
+  height: 60px;
+  background-color: yellow;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 7%;
+  right: 2%;
+  opacity: 1;
+}
+
+.bullet-ui__bg {
+  width: 20px;
+  height: 60px;
+  background-color: yellow;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 7%;
+  right: 2%;
+  opacity: 0.2;
+}
+.bullet-ui-animation {
+  animation: bulletLoad 1s both linear;
+}
+@keyframes bulletLoad {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 60px;
+  }
+}
