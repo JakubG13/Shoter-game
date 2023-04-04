@@ -29,3 +29,19 @@ const metInit = () => {
 };
 
 setInterval(metInit, 1000);
+const createFakeMet = () => {
+  for (let i = 1; i < 6; i++) {
+    let met = document.createElement("div");
+    met.classList.add("fake-met");
+    met.classList.add(`met${i}`);
+    document.body.appendChild(met);
+  }
+};
+createFakeMet();
+const removeFakeMet = () => {
+  [...document.querySelectorAll(".fake-met")].forEach((met) =>
+    document.body.removeChild(met)
+  );
+};
+
+setTimeout(removeFakeMet, 5000);

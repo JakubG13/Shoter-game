@@ -11,6 +11,7 @@
     justify-content: space-around;
     align-items: center;
     font-size: 2rem;
+    z-index: 5;
   }
   .mobile-ui__left,
   .mobile-ui__right {
@@ -22,6 +23,7 @@
     align-items: center;
     justify-content: center;
     color: black;
+    z-index: 5;
   }
 }
 
@@ -29,6 +31,7 @@
   .mobile-ui {
     opacity: 0.1;
     font-size: 2rem;
+    z-index: 5;
   }
 
   .mobile-ui__right,
@@ -44,6 +47,7 @@
     position: fixed;
     top: calc(70% - 70px / 2);
     right: 2%;
+    z-index: 5;
   }
   .mobile-ui__left {
     position: fixed;

@@ -21,7 +21,8 @@ const move = (e) => {
   }
 };
 let flag = true;
-// let bullY = "";
+let bullY = "";
+let bullX = "";
 const shot = () => {
   if (flag === true) {
     document.querySelector(".bullet-ui").classList.add("bullet-ui-animation");
@@ -40,7 +41,18 @@ const shot = () => {
   myCallBack = () => {
     bullY = document.querySelector(".bullet").getBoundingClientRect().y;
     bullX = document.querySelector(".bullet").getBoundingClientRect().x;
-    console.log(bullY, bullX);
+    met1X = document.querySelector(".met1").getBoundingClientRect().x;
+    met1Y = document.querySelector(".met1").getBoundingClientRect().y;
+    met2X = document.querySelector(".met2").getBoundingClientRect().x;
+    met2Y = document.querySelector(".met2").getBoundingClientRect().y;
+    met3X = document.querySelector(".met3").getBoundingClientRect().x;
+    met3Y = document.querySelector(".met3").getBoundingClientRect().y;
+    met4X = document.querySelector(".met4").getBoundingClientRect().x;
+    met4Y = document.querySelector(".met4").getBoundingClientRect().y;
+    met5X = document.querySelector(".met5").getBoundingClientRect().x;
+    met5Y = document.querySelector(".met5").getBoundingClientRect().y;
+
+    console.log(met1X, met1Y);
   };
   const intervalID = setInterval(myCallBack, 1);
   const end = () => {
