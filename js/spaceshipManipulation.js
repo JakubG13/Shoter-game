@@ -21,6 +21,7 @@ const move = (e) => {
   }
 };
 let flag = true;
+// let bullY = "";
 const shot = () => {
   if (flag === true) {
     document.querySelector(".bullet-ui").classList.add("bullet-ui-animation");
@@ -35,6 +36,17 @@ const shot = () => {
       flag = true;
     }, 1000);
   }
+
+  myCallBack = () => {
+    bullY = document.querySelector(".bullet").getBoundingClientRect().y;
+    bullX = document.querySelector(".bullet").getBoundingClientRect().x;
+    console.log(bullY, bullX);
+  };
+  const intervalID = setInterval(myCallBack, 1);
+  const end = () => {
+    clearInterval(intervalID);
+  };
+  setTimeout(end, 1000);
 };
 
 document.querySelector(".shotHere").addEventListener("click", shot);
