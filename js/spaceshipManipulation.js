@@ -1,5 +1,5 @@
 let moveKeys = [];
-let moveNumber = 10;
+let moveNumber = 20;
 
 const move = (e) => {
   // console.log(moveKeys);
