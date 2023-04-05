@@ -1,0 +1,26 @@
+.gameOver {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.9;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameOver__info {
+  color: rgb(255, 0, 0);
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.gameOver__secondInfo {
+  color: white;
+  font-size: 2rem;
+  margin-top: 50px;
+}

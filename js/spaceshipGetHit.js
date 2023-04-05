@@ -78,7 +78,7 @@ checkHit = () => {
   }
   if (lifes === 3) {
     document.querySelector(".lifes__3").style.color = "grey";
-    console.log("lose");
+    document.querySelector(".gameOver").style.display = "flex";
   }
 };
 
