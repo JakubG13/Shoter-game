@@ -19,13 +19,10 @@
   background-color: yellow;
   border-radius: 20px;
   position: absolute;
-  bottom: 7%;
+  bottom: 85%;
   right: 2%;
   opacity: 1;
   z-index: 5;
-  @media (max-width: 1200px) {
-    bottom: 80%;
-  }
 }
 
 .bullet-ui__bg {
@@ -34,12 +31,9 @@
   background-color: yellow;
   border-radius: 20px;
   position: absolute;
-  bottom: 7%;
+  bottom: 85%;
   right: 2%;
   opacity: 0.2;
-  @media (max-width: 1200px) {
-    bottom: 80%;
-  }
 }
 .bullet-ui-animation {
   animation: bulletLoad 1s both linear;

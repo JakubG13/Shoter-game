@@ -1,3 +1,5 @@
+let lifes = 0;
+
 checkHit = () => {
   met1X = document.querySelector(".met1").getBoundingClientRect().x;
   met1Y = document.querySelector(".met1").getBoundingClientRect().y;
@@ -33,35 +35,50 @@ checkHit = () => {
     spaceshipY + spaceshipHeight <= met1Y + met1Height + spaceshipHeight &&
     spaceshipY >= met1Y - spaceshipHeight
   ) {
-    console.log("dziala");
+    document.querySelector(".met1").style.top = "1000%";
+    lifes++;
   } else if (
     spaceshipX + spaceshipWidth <= met2X + met2Width + spaceshipWidth &&
     spaceshipX >= met2X - spaceshipWidth &&
     spaceshipY + spaceshipHeight <= met2Y + met2Height + spaceshipHeight &&
     spaceshipY >= met2Y - spaceshipHeight
   ) {
-    console.log("dziala");
+    document.querySelector(".met2").style.top = "1000%";
+    lifes++;
   } else if (
     spaceshipX + spaceshipWidth <= met3X + met3Width + spaceshipWidth &&
     spaceshipX >= met3X - spaceshipWidth &&
     spaceshipY + spaceshipHeight <= met3Y + met3Height + spaceshipHeight &&
     spaceshipY >= met3Y - spaceshipHeight
   ) {
-    console.log("dziala");
+    document.querySelector(".met3").style.top = "1000%";
+    lifes++;
   } else if (
     spaceshipX + spaceshipWidth <= met4X + met4Width + spaceshipWidth &&
     spaceshipX >= met4X - spaceshipWidth &&
     spaceshipY + spaceshipHeight <= met4Y + met4Height + spaceshipHeight &&
     spaceshipY >= met4Y - spaceshipHeight
   ) {
-    console.log("dziala");
+    document.querySelector(".met4").style.top = "1000%";
+    lifes++;
   } else if (
     spaceshipX + spaceshipWidth / 2 <= met5X + met5Width + spaceshipWidth &&
     spaceshipX >= met5X - spaceshipWidth &&
     spaceshipY + spaceshipHeight <= met5Y + met5Height + spaceshipHeight &&
     spaceshipY >= met5Y - spaceshipHeight
   ) {
-    console.log("dziala");
+    document.querySelector(".met5").style.top = "1000%";
+    lifes++;
+  }
+  if (lifes === 1) {
+    document.querySelector(".lifes__1").style.color = "grey";
+  }
+  if (lifes === 2) {
+    document.querySelector(".lifes__2").style.color = "grey";
+  }
+  if (lifes === 3) {
+    document.querySelector(".lifes__3").style.color = "grey";
+    console.log("lose");
   }
 };
 

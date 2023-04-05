@@ -1,0 +1,18 @@
+.lifes {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 50px;
+  width: 175px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.lifes__1,
+.lifes__2,
+.lifes__3 {
+  font-size: 2.5rem;
+  color: red;
+}
