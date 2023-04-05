@@ -7,6 +7,7 @@
   background-color: #ffffff;
   border-radius: 50%;
   animation: zoom 8s alternate infinite;
+  z-index: -2;
 }
 @keyframes zoom {
   0% {

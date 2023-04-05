@@ -6,6 +6,7 @@
   //   background-color: yellow;
   width: 75px;
   height: 50px;
+  z-index: -2;
   @media (orientation: landscape) and (max-width: 1200px) {
     top: 80%;
   }
