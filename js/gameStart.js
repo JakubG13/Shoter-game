@@ -1,4 +1,4 @@
-let gameStartNumber = 5;
+let gameStartNumber = 3;
 const addGameStartNumber = () => {
   gameStartNumber--;
   document.querySelector(".gameStart__seconds").textContent = gameStartNumber;
