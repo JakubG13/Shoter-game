@@ -1,6 +1,7 @@
 let moveKeys = [];
 let moveNumber = 20;
 let points = 0;
+const pointsHere = document.querySelector(".points");
 const move = (e) => {
   // console.log(moveKeys);
   if (!moveKeys.includes(e.key)) {
@@ -74,44 +75,54 @@ const shot = () => {
       bullY <= met1Y + met1Height &&
       bullY >= met1Y
     ) {
-      document.querySelector(".met1").style.opacity = "0";
-
+      document.querySelector(".met1").style.top = "1000%";
       document.body.removeChild(document.querySelector(".bullet"));
+      points++;
+      pointsHere.textContent = points;
     } else if (
       bullX <= met2X + met2Width &&
       bullX >= met2X &&
       bullY <= met2Y + met2Height &&
       bullY >= met2Y
     ) {
-      document.querySelector(".met2").style.opacity = "0";
+      document.querySelector(".met2").style.top = "1000%";
 
       document.body.removeChild(document.querySelector(".bullet"));
+      points++;
+      pointsHere.textContent = points;
     } else if (
       bullX <= met3X + met3Width &&
       bullX >= met3X &&
       bullY <= met3Y + met3Height &&
       bullY >= met3Y
     ) {
-      document.querySelector(".met3").style.opacity = "0";
+      document.querySelector(".met3").style.top = "1000%";
 
       document.body.removeChild(document.querySelector(".bullet"));
+      points++;
+      pointsHere.textContent = points;
     } else if (
       bullX <= met4X + met4Width &&
       bullX >= met4X &&
       bullY <= met4Y + met4Height &&
       bullY >= met4Y
     ) {
-      document.querySelector(".met4").style.opacity = "0";
+      document.querySelector(".met4").style.top = "1000%";
 
       document.body.removeChild(document.querySelector(".bullet"));
+      points++;
+      pointsHere.textContent = points;
     } else if (
       bullX <= met5X + met5Width &&
       bullX >= met5X &&
       bullY <= met5Y + met5Height &&
       bullY >= met5Y
     ) {
-      document.querySelector(".met5").style.opacity = "0";
+      document.querySelector(".met5").style.top = "1000%";
       document.body.removeChild(document.querySelector(".bullet"));
+
+      points++;
+      pointsHere.textContent = points;
     }
   };
 
