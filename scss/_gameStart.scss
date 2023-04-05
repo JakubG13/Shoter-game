@@ -1,0 +1,50 @@
+.gameStart {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.9;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameStart__info {
+  color: rgb(9, 252, 61);
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.gameStart__seconds {
+  color: rgb(9, 252, 61);
+  font-size: 5rem;
+}
+.gameStart__controls {
+  position: fixed;
+  top: 5%;
+  left: 0;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  color: yellow;
+}
+.gameStart__shoot {
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+.gameStart__move {
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+.gameStart__shootMobile {
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
