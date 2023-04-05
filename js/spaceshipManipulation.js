@@ -65,9 +65,47 @@ const shot = () => {
     met4Height = document.querySelector(".met4").getBoundingClientRect().height;
     met5Height = document.querySelector(".met5").getBoundingClientRect().height;
 
-    // console.log(bullX, bullY);
-    // console.log(met1X, met1Y);
-    // console.log(met1Width);
+    spaceshipX = spaceship.getBoundingClientRect().x;
+    spaceshipY = spaceship.getBoundingClientRect().y;
+    spaceshipWidth = spaceship.getBoundingClientRect().width;
+    spaceshipHeight = spaceship.getBoundingClientRect().height;
+
+    if (
+      spaceshipX + spaceshipWidth <= met1X + met1Width &&
+      spaceshipX >= met1X &&
+      spaceshipY + spaceshipHeight <= met1Y + met1Height &&
+      spaceshipY >= met1Y
+    ) {
+      console.log("dziala");
+    } else if (
+      spaceshipX + spaceshipWidth <= met2X + met2Width &&
+      spaceshipX >= met2X &&
+      spaceshipY + spaceshipHeight <= met2Y + met2Height &&
+      spaceshipY >= met2Y
+    ) {
+      console.log("dziala");
+    } else if (
+      spaceshipX + spaceshipWidth <= met3X + met3Width &&
+      spaceshipX >= met3X &&
+      spaceshipY + spaceshipHeight <= met3Y + met3Height &&
+      spaceshipY >= met3Y
+    ) {
+      console.log("dziala");
+    } else if (
+      spaceshipX + spaceshipWidth <= met4X + met4Width &&
+      spaceshipX >= met4X &&
+      spaceshipY + spaceshipHeight <= met4Y + met4Height &&
+      spaceshipY >= met4Y
+    ) {
+      console.log("dziala");
+    } else if (
+      spaceshipX + spaceshipWidth <= met5X + met5Width &&
+      spaceshipX >= met5X &&
+      spaceshipY + spaceshipHeight <= met5Y + met5Height &&
+      spaceshipY >= met5Y
+    ) {
+      console.log("dziala");
+    }
 
     if (
       bullX <= met1X + met1Width &&

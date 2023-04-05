@@ -1,6 +1,5 @@
 let lights = [...document.querySelectorAll(".spaceship__light")];
 let color = "";
-let spaceshipY = document.querySelector(".spaceship__y");
 
 const randomColor = () => {
   let number = Math.floor(Math.random() * 3);
@@ -12,7 +11,7 @@ const randomColor = () => {
     color = "blue";
   }
   lights.forEach((light) => (light.style.backgroundColor = color));
-  spaceshipY.style.border = `3px solid ${color}`;
+  document.querySelector(".spaceship__y").style.border = `3px solid ${color}`;
 };
 
 setInterval(randomColor, 2000);
