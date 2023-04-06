@@ -10,3 +10,7 @@ const gameStart = () => {
   setInterval(addGameStartNumber, 1000);
 };
 gameStart();
+
+document.querySelector(".gameOver__btn").addEventListener("click", () => {
+  location.reload();
+});

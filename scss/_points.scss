@@ -1,9 +1,9 @@
 .points {
   position: fixed;
   font-size: 6rem;
-  z-index: 15;
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
   color: white;
+  z-index: 50;
 }

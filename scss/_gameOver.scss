@@ -24,3 +24,22 @@
   font-size: 2rem;
   margin-top: 50px;
 }
+
+.gameOver__btn {
+  font-size: 1.5rem;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 25px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+  &:hover {
+    // text-decoration: underline;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+  }
+}
