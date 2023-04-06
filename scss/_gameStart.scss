@@ -26,9 +26,12 @@
 }
 .gameStart__controls {
   position: fixed;
-  top: 5%;
+  top: 15%;
   left: 0;
   font-size: 2rem;
+  @media (min-width: 1200px) {
+    font-size: 4rem;
+  }
   width: 100%;
   text-align: center;
   color: yellow;
