@@ -1,5 +1,6 @@
 let moveKeys = [];
 let moveNumber = 25;
+let moveNumberMobile = 1;
 let points = 0;
 const pointsHere = document.querySelector(".points");
 const move = (e) => {
@@ -140,16 +141,34 @@ document.addEventListener("keyup", (e) => {
 const leftArrow = document.querySelector(".mobile-ui__left");
 const rightArrow = document.querySelector(".mobile-ui__right");
 leftArrow.addEventListener("touchstart", () => {
-  if (spaceship.getBoundingClientRect().x >= 30) {
-    shipX = spaceship.getBoundingClientRect().x;
-    newPos = shipX - moveNumber;
-    spaceship.style.left = newPos + "px";
+  function handleStart() {
+    if (spaceship.getBoundingClientRect().x >= 30) {
+      shipX = spaceship.getBoundingClientRect().x;
+      newPos = shipX - moveNumberMobile;
+      spaceship.style.left = newPos + "px";
+    }
   }
+  const intervalID = setInterval(handleStart, 1);
+  leftArrow.addEventListener("touchend", () => {
+    const end = () => {
+      clearInterval(intervalID);
+    };
+    end();
+  });
 });
 rightArrow.addEventListener("touchstart", () => {
-  if (spaceship.getBoundingClientRect().x <= window.innerWidth - 100) {
-    shipX = spaceship.getBoundingClientRect().x;
-    newPos = shipX + moveNumber;
-    spaceship.style.left = newPos + "px";
+  function handleStart() {
+    if (spaceship.getBoundingClientRect().x <= window.innerWidth - 100) {
+      shipX = spaceship.getBoundingClientRect().x;
+      newPos = shipX + moveNumberMobile;
+      spaceship.style.left = newPos + "px";
+    }
   }
+  const intervalID = setInterval(handleStart, 1);
+  rightArrow.addEventListener("touchend", () => {
+    const end = () => {
+      clearInterval(intervalID);
+    };
+    end();
+  });
 });
