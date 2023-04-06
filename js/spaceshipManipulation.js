@@ -1,6 +1,6 @@
 let moveKeys = [];
 let moveNumber = 25;
-let moveNumberMobile = 1;
+let moveNumberMobile = 1.5;
 let points = 0;
 const pointsHere = document.querySelector(".points");
 const move = (e) => {
