@@ -1,4 +1,5 @@
 let lifes = 0;
+let hitSoundVolume = 0.8;
 
 checkHit = () => {
   met1X = document.querySelector(".met1").getBoundingClientRect().x;
@@ -37,6 +38,14 @@ checkHit = () => {
   ) {
     document.querySelector(".met1").style.top = "1000%";
     lifes++;
+    let hitSound = new Audio(
+      "audio/mixkit-electronic-retro-block-hit-2185.wav"
+    );
+    hitSound.volume = hitSoundVolume;
+
+    if (lifes <= 3) {
+      hitSound.play();
+    }
   } else if (
     spaceshipX + spaceshipWidth <= met2X + met2Width + spaceshipWidth &&
     spaceshipX >= met2X - spaceshipWidth &&
@@ -45,6 +54,13 @@ checkHit = () => {
   ) {
     document.querySelector(".met2").style.top = "1000%";
     lifes++;
+    let hitSound = new Audio(
+      "audio/mixkit-electronic-retro-block-hit-2185.wav"
+    );
+    hitSound.volume = hitSoundVolume;
+    if (lifes <= 3) {
+      hitSound.play();
+    }
   } else if (
     spaceshipX + spaceshipWidth <= met3X + met3Width + spaceshipWidth &&
     spaceshipX >= met3X - spaceshipWidth &&
@@ -53,6 +69,13 @@ checkHit = () => {
   ) {
     document.querySelector(".met3").style.top = "1000%";
     lifes++;
+    let hitSound = new Audio(
+      "audio/mixkit-electronic-retro-block-hit-2185.wav"
+    );
+    hitSound.volume = hitSoundVolume;
+    if (lifes <= 3) {
+      hitSound.play();
+    }
   } else if (
     spaceshipX + spaceshipWidth <= met4X + met4Width + spaceshipWidth &&
     spaceshipX >= met4X - spaceshipWidth &&
@@ -61,6 +84,13 @@ checkHit = () => {
   ) {
     document.querySelector(".met4").style.top = "1000%";
     lifes++;
+    let hitSound = new Audio(
+      "audio/mixkit-electronic-retro-block-hit-2185.wav"
+    );
+    hitSound.volume = hitSoundVolume;
+    if (lifes <= 3) {
+      hitSound.play();
+    }
   } else if (
     spaceshipX + spaceshipWidth / 2 <= met5X + met5Width + spaceshipWidth &&
     spaceshipX >= met5X - spaceshipWidth &&
@@ -69,6 +99,13 @@ checkHit = () => {
   ) {
     document.querySelector(".met5").style.top = "1000%";
     lifes++;
+    let hitSound = new Audio(
+      "audio/mixkit-electronic-retro-block-hit-2185.wav"
+    );
+    hitSound.volume = hitSoundVolume;
+    if (lifes <= 3) {
+      hitSound.play();
+    }
   }
   if (lifes === 1) {
     document.querySelector(".lifes__1").style.color = "grey";
@@ -79,6 +116,8 @@ checkHit = () => {
   if (lifes === 3) {
     document.querySelector(".lifes__3").style.color = "grey";
     document.querySelector(".gameOver").style.display = "flex";
+    let backgroundMusic = document.querySelector(".music");
+    backgroundMusic.pause();
   }
 };
 
