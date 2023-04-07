@@ -25,22 +25,32 @@ const move = (e) => {
 let flag = true;
 let bullY = "";
 let bullX = "";
+
 const shot = () => {
+  let backgroundMusic = document.querySelector(".music");
+  backgroundMusic.play();
   if (flag === true) {
+    let blasterSound = new Audio("audio/blaster-2-81267.mp3");
+    blasterSound.volume = 0.2;
+    blasterSound.play();
     document.querySelector(".bullet-ui").classList.add("bullet-ui-animation");
 
     let bullet = new Bullet(bulletX, bulletY);
     bullet.createBullet();
     flag = false;
+    document.querySelector(".shotHere").style.display = "none";
     setTimeout(() => {
       document
         .querySelector(".bullet-ui")
         .classList.remove("bullet-ui-animation");
       flag = true;
+      document.querySelector(".shotHere").style.display = "block";
     }, 1000);
   }
 
   myCallBack = () => {
+    let meteoriteDestroy = new Audio("audio/rock-destroy-6409.mp3");
+    meteoriteDestroy.volume = 0.2;
     bullY = document.querySelector(".bullet").getBoundingClientRect().y;
     bullX = document.querySelector(".bullet").getBoundingClientRect().x;
     met1X = document.querySelector(".met1").getBoundingClientRect().x;
@@ -76,6 +86,7 @@ const shot = () => {
       document.body.removeChild(document.querySelector(".bullet"));
       points++;
       pointsHere.textContent = points;
+      meteoriteDestroy.play();
     } else if (
       bullX <= met2X + met2Width &&
       bullX >= met2X &&
@@ -83,10 +94,10 @@ const shot = () => {
       bullY >= met2Y
     ) {
       document.querySelector(".met2").style.top = "1000%";
-
       document.body.removeChild(document.querySelector(".bullet"));
       points++;
       pointsHere.textContent = points;
+      meteoriteDestroy.play();
     } else if (
       bullX <= met3X + met3Width &&
       bullX >= met3X &&
@@ -94,10 +105,10 @@ const shot = () => {
       bullY >= met3Y
     ) {
       document.querySelector(".met3").style.top = "1000%";
-
       document.body.removeChild(document.querySelector(".bullet"));
       points++;
       pointsHere.textContent = points;
+      meteoriteDestroy.play();
     } else if (
       bullX <= met4X + met4Width &&
       bullX >= met4X &&
@@ -105,10 +116,10 @@ const shot = () => {
       bullY >= met4Y
     ) {
       document.querySelector(".met4").style.top = "1000%";
-
       document.body.removeChild(document.querySelector(".bullet"));
       points++;
       pointsHere.textContent = points;
+      meteoriteDestroy.play();
     } else if (
       bullX <= met5X + met5Width &&
       bullX >= met5X &&
@@ -117,9 +128,9 @@ const shot = () => {
     ) {
       document.querySelector(".met5").style.top = "1000%";
       document.body.removeChild(document.querySelector(".bullet"));
-
       points++;
       pointsHere.textContent = points;
+      meteoriteDestroy.play();
     }
   };
 
