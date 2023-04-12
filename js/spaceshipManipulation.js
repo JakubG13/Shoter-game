@@ -87,6 +87,7 @@ const shot = () => {
       points++;
       pointsHere.textContent = points;
       meteoriteDestroy.play();
+      end();
     } else if (
       bullX <= met2X + met2Width &&
       bullX >= met2X &&
@@ -98,6 +99,7 @@ const shot = () => {
       points++;
       pointsHere.textContent = points;
       meteoriteDestroy.play();
+      end();
     } else if (
       bullX <= met3X + met3Width &&
       bullX >= met3X &&
@@ -109,6 +111,7 @@ const shot = () => {
       points++;
       pointsHere.textContent = points;
       meteoriteDestroy.play();
+      end();
     } else if (
       bullX <= met4X + met4Width &&
       bullX >= met4X &&
@@ -120,6 +123,7 @@ const shot = () => {
       points++;
       pointsHere.textContent = points;
       meteoriteDestroy.play();
+      end();
     } else if (
       bullX <= met5X + met5Width &&
       bullX >= met5X &&
@@ -131,6 +135,7 @@ const shot = () => {
       points++;
       pointsHere.textContent = points;
       meteoriteDestroy.play();
+      end();
     }
   };
 
