@@ -16,8 +16,15 @@ class Bullet {
     bullet.style.left = this.bulletX + "px";
     bullet.style.top = this.bulletY + "px";
     document.body.appendChild(bullet);
+    let bullY = bullet.getBoundingClientRect().y;
+    // if (bullY <= 0) {
+    //   document.body.removeChild(bullet);
+    // }
+
     setTimeout(() => {
-      document.body.removeChild(bullet);
+      if (document.body.contains(bullet)) {
+        document.body.removeChild(bullet);
+      }
     }, 1000);
   }
 }
