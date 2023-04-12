@@ -120,5 +120,6 @@ checkHit = () => {
     backgroundMusic.pause();
   }
 };
-
-setInterval(checkHit, 1);
+setTimeout(() => {
+  setInterval(checkHit, 1);
+}, 7000);
